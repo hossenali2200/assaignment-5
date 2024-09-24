@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation History</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="max-w-[80%] mx-auto">
-    <header>
-        <!-- Header Section -->
-         <div class="bg-stone-300 grid grid-cols-3 p-8">
-            <div >
-                <button class="bg-lime-400 px-6 py-3 rounded-lg text-xl font-semibold">Blog</button> 
-            </div>
-            <div class="flex justify-normal items-center gap-2">
-                <img class="w-12" src="./assets/logo.png" alt="logo">
-                <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
-            </div>
-            <div class="flex justify-end items-center gap-2">
-                <img src="./assets/coin.png" alt="">
-                <p>
-                    <span>5500</span> <span>BDT</span>
-                </p>
-            </div>
-         </div>
-    </header>
-    <main>
-         <!-- button -->
-         <div class="mt-14 mb-8 w-full mx-auto text-center gap-2">
-            <a href="./index.html" class="bg-lime-400 mr-2 px-6 py-3 rounded-lg text-xl font-semibold">Donation</a>
-            <a href="./history.html" class=" border px-6 py-3 rounded-lg text-xl font-semibold">History</a>
-         </div>
+    <script src="./history.js"></script>
+  </head>
+  <body class="max-w-[80%] mx-auto">
+    <header class="sticky top-0">
+      <!-- Header Section -->
+       <div class="bg-stone-300 lg:grid lg:grid-cols-3 flex-col lg:p-8 p-4">
+          <div >
+            <a href="accordion.html" class="bg-lime-400 px-6 py-3 rounded-lg text-xl font-semibold ">Blog</a> 
+          </div>
+          <div class="lg:flex justify-normal items-center gap-2    ">
+              <img class="lg:w-12 mt-6" src="./assets/logo.png" alt="logo">
+              <h2 class="text-xl font-semibold ">Donate Bangladesh</h2>
+          </div>
+          <div class="flex justify-end items-center gap-2">
+              <img src="./assets/coin.png" alt="">
+              <p>
+                  <span>5500</span> <span>BDT</span>
+              </p>
+          </div>
+       </div>
 
-         <!-- card-1 -->
-         <section class="mb-8">
-            <div class="  border-2 border-stone-300 p-4 rounded-xl gap-6">
-               
-                <h2 class="text-xl font-semibold mb-2"> <span>96500</span>  Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-                <p> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-                      
-            </div>
-            <div class=" mt-8 border-2 border-stone-300 p-4 rounded-xl gap-6">
-               
-                <h2 class="text-xl font-semibold mb-2"> <span>6500</span> Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
-                <p> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-                      
-            </div>
-            <div class=" mt-8 border-2 border-stone-300 p-4 rounded-xl gap-6">
-               
-                <h2 class="text-xl font-semibold mb-2"> <span>15500</span> Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
-                <p> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-                      
-            </div>
-         </section>
-        
+      <!-- Header Section with Toggle Buttons -->
+  <div class="bg-gray-200 p-8 flex justify-center">
+      <a id="donationButton"
+        href="index.html"
+        class="mr-2 px-6 py-3 rounded-lg text-xl font-semibold bg-white text-black border">
+        Donation
+      </a>
+      <a id="historyButton"
+        href="history.html"
+        class="mr-2 px-6 py-3 rounded-lg text-xl font-semibold bg-lime-400 text-white">
+        History
+      </a>
+    </div>
+  </header>
 
+    <main class=" lg:w-[1200px]">
 
-          
-
-        
+       
+      <h2 class="text-2xl font-semibold mb-4">Your Donation History</h2>
+      <div id="historyList" class="space-y-4"></div>
     </main>
-    <footer class="bg-stone-300 h-32 ">
 
-    </footer>
-
-    <script src="./script.js"></script>
-    
-</body>
+    <footer class="bg-stone-300 h-32 mt-4"></footer>
+  </body>
 </html>
